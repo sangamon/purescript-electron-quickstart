@@ -16,6 +16,6 @@ main = do
   log homePath
   onReady $ do
     log "starting..."
-    mainWindow <- newBrowserWindow [Width 800, Height 600]
+    mainWindow <- newBrowserWindow { width: 1200, height: 800, show: true }
     mainWindow `onClose` quit
     mainWindow `loadURL` "http://purescript.org"
